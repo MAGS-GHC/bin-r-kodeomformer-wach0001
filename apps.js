@@ -236,49 +236,50 @@ function svar() {
 
 function bin() {
   let bi2ip;
-  bi2ip = 11000000;
+  bi2ip = document.getElementById("biToIp").value;
+  //bi2ip = [0,0,0,0,0,0,0,0];
   let navn = 0;
   console.log(bi2ip);
   if (bi2ip[0] >= 1) {
     navn += 128;
     console.log(navn);
   }
-  if (bi2ip >= 1) {
-    bi2ip += 64;
+  if (bi2ip[1] >= 1) {
+    navn += 64;
+    console.log(navn);
   }
-  if (bi2ip >= 1) {
-    bi2ip += 32;
+  if (bi2ip[2] >= 1) {
+    navn += 32;
   }
-  if (bi2ip >= 1) {
-    bi2ip += 16;
+  if (bi2ip[3] >= 1) {
+    navn += 16;
   }
-  if (bi2ip >= 1) {
-    bi2ip += 8;
+  if (bi2ip[4] >= 1) {
+    navn += 8;
   }
-  if (bi2ip >= 1) {
-    bi2ip += 4;
+  if (bi2ip[5] >= 1) {
+    navn += 4;
   }
-  if (bi2ip >= 1) {
-    bi2ip += 2;
+  if (bi2ip[6] >= 1) {
+    navn += 2;
   }
-  if (bi2ip >= 1);
-  {
-    bi2ip = 1;
+  if (bi2ip[7] >= 1) {
+    navn += 1;
   }
 
-  document.getElementById("svar1").innerHTML = "Ip Adresse: " + bi2ip;
+  document.getElementById("svar1").innerHTML = "Ip Adresse: " + navn;
 }
 
-let tabel = [128, 64, 32, 16, 8, 4, 2, 1];
-for (let i = 0; i < tabel.length; i++) {
-  if (tabel[i] === "1") {
-    tabel[i] = tabel + (2 ^ (i - 1));
-  }
-  return tabel;
-  console.log(tabel);
-}
+//let tabel = [128, 64, 32, 16, 8, 4, 2, 1];
+//for (let i = 0; i < tabel.length; i++) {
+// if (tabel[i] === "1") {
+//   tabel[i] = tabel + (2 ^ (i - 1));
+// }
+// return tabel;
+// console.log(tabel);
+// }
 
-document.getElementById("svar1").innerHTML = "IP adresse: " + tabel;
+//document.getElementById("svar1").innerHTML = "IP adresse: " + tabel;
 
 //for (let i = 0; i < convertBinary.length; i++) {}
 
