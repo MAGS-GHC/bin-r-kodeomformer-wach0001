@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binær Kodeformer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>IP => Binær</h1>
+    <form>
+      <label>Enter an IP address:</label>
+      <br />
+      <input
+        value="192"
+        id="ip1"
+        name="ip1"
+        type="number"
+        step="1"
+        placeholder="0"
+        min="0"
+        max="255"
+      />
+      <input
+        id="ip2"
+        name="ip2"
+        type="number"
+        step="1"
+        placeholder="0"
+        min="0"
+        max="255"
+      />
+      <input
+        id="ip3"
+        name="ip3"
+        type="number"
+        step="1"
+        placeholder="0"
+        min="0"
+        max="255"
+      />
+      <input
+        id="ip4"
+        name="ip4"
+        type="number"
+        step="1"
+        placeholder="0"
+        min="0"
+        max="255"
+      />
+    </form>
+    <button onclick="update();update1();update2();update3();svar();">
+      Click
+    </button>
+    <p id="svar">Binary representation:</p>
+
+    <h1>Binær => IP</h1>
+    <form>
+      <label for="biToIp"></label>
+      <input
+        value=""
+        type="number"
+        name="biToIp"
+        id="biToIp"
+        placeholder="Enter Binary Numbers Only (1s and 0s)"
+        min=""
+        max=""
+      />
+    </form>
+
+    <button onclick="bin()">Click</button>
+
+    <p id="svar1">Ip Adresse:</p>
+
+    <script src="apps.js"></script>
+  </body>
+</html>
