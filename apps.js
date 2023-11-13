@@ -232,6 +232,7 @@ function update3() {
 function svar() {
   document.getElementById("svar").innerHTML = "Binary representation: " + rep;
   console.log(rep);
+  rep = "";
 }
 
 function bin() {
@@ -242,11 +243,9 @@ function bin() {
   console.log(bi2ip);
   if (bi2ip[0] >= 1) {
     navn += 128;
-    console.log(navn);
   }
   if (bi2ip[1] >= 1) {
     navn += 64;
-    console.log(navn);
   }
   if (bi2ip[2] >= 1) {
     navn += 32;
@@ -266,8 +265,93 @@ function bin() {
   if (bi2ip[7] >= 1) {
     navn += 1;
   }
+  if (bi2ip[8] === ".") {
+    navn += ".";
+  }
+  let navn2 = 0;
+  if (bi2ip[9] >= 1) {
+    navn2 += 128;
+  }
+  if (bi2ip[10] >= 1) {
+    navn2 += 64;
+  }
+  if (bi2ip[11] >= 1) {
+    navn2 += 32;
+  }
+  if (bi2ip[12] >= 1) {
+    navn2 += 16;
+  }
+  if (bi2ip[13] >= 1) {
+    navn2 += 8;
+  }
+  if (bi2ip[14] >= 1) {
+    navn2 += 4;
+  }
+  if (bi2ip[15] >= 1) {
+    navn2 += 2;
+  }
+  if (bi2ip[16] >= 1) {
+    navn2 += 1;
+  }
+  if (bi2ip[17] === ".") {
+    navn2 += ".";
+  }
+  let navn3 = 0;
+  if (bi2ip[18] >= 1) {
+    navn3 += 128;
+  }
+  if (bi2ip[19] >= 1) {
+    navn3 += 64;
+  }
+  if (bi2ip[20] >= 1) {
+    navn3 += 32;
+  }
+  if (bi2ip[21] >= 1) {
+    navn3 += 16;
+  }
+  if (bi2ip[22] >= 1) {
+    navn3 += 8;
+  }
+  if (bi2ip[23] >= 1) {
+    navn3 += 4;
+  }
+  if (bi2ip[24] >= 1) {
+    navn3 += 2;
+  }
+  if (bi2ip[25] >= 1) {
+    navn3 += 1;
+  }
+  if (bi2ip[26] === ".") {
+    navn3 += ".";
+  }
+  let navn4 = 0;
+  if (bi2ip[27] >= 1) {
+    navn4 += 128;
+  }
+  if (bi2ip[28] >= 1) {
+    navn4 += 64;
+  }
+  if (bi2ip[29] >= 1) {
+    navn4 += 32;
+  }
+  if (bi2ip[30] >= 1) {
+    navn4 += 16;
+  }
+  if (bi2ip[31] >= 1) {
+    navn4 += 8;
+  }
+  if (bi2ip[32] >= 1) {
+    navn4 += 4;
+  }
+  if (bi2ip[33] >= 1) {
+    navn4 += 2;
+  }
+  if (bi2ip[34] >= 1) {
+    navn4 += 1;
+  }
 
-  document.getElementById("svar1").innerHTML = "Ip Adresse: " + navn;
+  document.getElementById("svar1").innerHTML =
+    "Ip Adresse: " + navn + navn2 + navn3 + navn4;
 }
 
 //let tabel = [128, 64, 32, 16, 8, 4, 2, 1];
